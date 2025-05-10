@@ -170,6 +170,7 @@ class Packet
                 $value = unpack('J', substr($data, $offset, 8))[1];
                 return [$value & 0x3FFFFFFFFFFFFFFF, 8];
         }
+        throw new \RuntimeException('未知的 prefix：' . $prefix);
     }
 
     // Getters

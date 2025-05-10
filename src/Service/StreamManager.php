@@ -266,5 +266,6 @@ class StreamManager
                     8
                 ];
         }
+        throw new \RuntimeException('未知的 prefix：' . $prefix);
     }
 } 
